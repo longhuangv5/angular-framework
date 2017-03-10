@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angular_framework</title>
+    <script>
+    	window.currVersion = window.localStorage.getItem('currVersion');
+    </script>
+    <script>
+    	document.write('<link rel="stylesheet" href="libs/pc/base-pc.css?version='+window.currVersion+'">');
+    	document.write('<script type="text/javascript" src="libs/pc/base-pc.js?version='+window.currVersion+'"><\/script>');
+    	document.write('<script type="text/javascript" src="base/main.js?version='+window.currVersion+'"><\/script>');
+    	document.write('<script type="text/javascript" src="pages/main/main_router.js?version='+window.currVersion+'"><\/script>');
+    </script>
+</head>
+<body ng-controller="appCtrl">
+    <ui-view></ui-view>
+</body>
+</html>
