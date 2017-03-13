@@ -1,0 +1,82 @@
+<div class="container" ng-controller="mainCtrl">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			{{app.name}}
+		</div>
+		<div class="panel-body">
+			<table class="table table-striped">
+				<thead>
+					<th>ID</th>
+					<th>名字</th>
+					<th>性別</th>
+					<th>年齡</th>
+					<th>职业</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>ajs</td>
+						<td>女</td>
+						<td>21</td>
+						<td>dsv</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>ajs</td>
+						<td>女</td>
+						<td>21</td>
+						<td>dsv</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>ajs</td>
+						<td>女</td>
+						<td>21</td>
+						<td>dsv</td>
+					</tr>
+				</tbody>
+			</table>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label>日期</label>
+					<div class="input-group">
+						<input class="form-control" type="text" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2019-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="关闭"/>					
+						<div class="input-group-btn">
+							<button class="btn btn-default" ng-click="open($event)"><span class="glyphicon glyphicon-calendar"></span></button>
+						</div>
+					</div>
+				</div>
+				<timepicker ng-model="mytime" ng-change="changed()" show-meridian="true"></timepicker>
+			</form>
+			<accordion close-others="true">
+                    <accordion-group>
+						<accordion-heading style="background-color: #0a9ec7">
+                            <div>1</div>
+                        </accordion-heading>
+                        <div class="row clear">
+                            123
+                        </div>
+                    </accordion-group>
+                    <accordion-group>
+						<accordion-heading style="background-color: #0a9ec7">
+                            2
+                        </accordion-heading>
+                        <div class="row clear">
+                            123
+                        </div>
+                    </accordion-group>
+                    <accordion-group>
+						<accordion-heading style="background-color: #0a9ec7">
+                            3
+                        </accordion-heading>
+                        <div class="row clear">
+                            123
+                        </div>
+                    </accordion-group>
+                </accordion>
+		</div>
+		<div class="panel-footer">
+			{{app.name}}
+		</div>
+	</div>
+</div>
